@@ -14,11 +14,14 @@ class EntityFactory:
         match entity_name:
             case 'Level1Bg':
                 return Background('Level1Bg', (0,0))
+            case 'Level2Bg':
+                return Background('Level2Bg', (0, 0))
             case 'Player':
                 return Player('Player', ((WIN_WIDTH/2 - 15), WIN_HEIGHT - 125))
             case 'Enemy':
                 choice = random.randint(0, 16)
-                return Enemy(f'Ball_{choice}', (random.randint(40, WIN_HEIGHT - 40),0 - 100))
+                return Enemy(f'Ball_{choice}', (random.randint(0, WIN_WIDTH - 57), -60))
+
 
 
         return None
