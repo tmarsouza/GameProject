@@ -9,8 +9,8 @@ from code.Const import WIN_WIDTH, COLOR_PURPLE, COLOR_BLACK, MENU_OPTION, COLOR_
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surface = pygame.image.load('./asset/MenuBg.png')
-        self.rectangle = self.surface.get_rect(left=0, top=0)
+        self.surf = pygame.image.load('./asset/MenuBg.png').convert_alpha()
+        self.rect = self.surf.get_rect(left=0, top=0)
 
 
     def run(self, ):
@@ -18,7 +18,7 @@ class Menu:
         # pygame.mixer_music.load('./asset/Sounds/Menu.mp3')    LOAD THE MUSIC
         # pygame.mixer_music.play(-1)     PLAY THE MUSIC
         while True:
-            self.window.blit(source=self.surface, dest=self.rectangle)
+            self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(120, "Fever", COLOR_PURPLE, ((WIN_WIDTH / 2), 120))
             self.menu_text(120, "Dream", COLOR_PURPLE, ((WIN_WIDTH / 2), 240))
 
