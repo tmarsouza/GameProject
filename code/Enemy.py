@@ -1,4 +1,4 @@
-from code.Const import WIN_HEIGHT, ENTITY_SPEED
+from code.Const import ENTITY_SPEED
 from code.Entity import Entity
 
 
@@ -8,5 +8,4 @@ class Enemy(Entity):
         super().__init__(name, position)
 
     def move(self):
-            self.rect.centery += ENTITY_SPEED[self.name]
-
+        self.rect.centery += ENTITY_SPEED[self.name] * 2

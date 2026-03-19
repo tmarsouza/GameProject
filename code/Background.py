@@ -1,7 +1,3 @@
-
-
-
-
 from code.Entity import Entity
 
 

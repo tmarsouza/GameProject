@@ -6,6 +6,7 @@ C_BLACK = (0, 0, 0)
 C_BLUE = (0, 0, 255)
 C_WHITE = (255, 255, 255)
 C_CYAN = (0, 128, 128)
+C_PINK = (255, 51, 153)
 
 # E
 ENTITY_SPEED = {
@@ -27,7 +28,7 @@ ENTITY_SPEED = {
     'Ball_14': 1.5,
     'Ball_15': 1.5,
     'Ball_16': 1.5,
-    'PlayerShot': 3
+    'PlayerShot': 3.5
 }
 
 ENTITY_HEALTH = {
@@ -103,7 +104,7 @@ ENTITY_SCORE = {
 }
 
 ENTITY_SHOT_DELAY = {
-    'Player': 30
+    'Player': 20
 
 }
 
@@ -116,18 +117,37 @@ MENU_OPTION = ('NEW GAME',
                'EXIT'
                )
 
+MENU_OPTION_GAME_OVER = 'BACK TO MENU',
+
 # P
 PLAYER_KEY_LEFT = {'Player': pygame.K_LEFT}
 PLAYER_KEY_RIGHT = {'Player': pygame.K_RIGHT}
 PLAYER_KEY_SHOOT = {'Player': pygame.K_SPACE}
 
 # S
-SPAWN_TIME = 2000
+SPAWN_TIME = 1000
 
 # T
-TIMEOUT_TICK = 100 # 0.1 seconds
-TIMEOUT_LEVEL = 10000 # 20 seconds
+TIMEOUT_TICK = 100  # 0.1 seconds
+TIMEOUT_LEVEL = 20000  # 20 seconds
 
 # W
 WIN_WIDTH = 536
 WIN_HEIGHT = 953
+
+# S
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 70),
+             'EnterName': (WIN_WIDTH / 2, 115),
+             'Label': ((WIN_WIDTH / 2) - 10, 115),
+             'Name': (WIN_WIDTH / 2, 165),
+             0: (WIN_WIDTH / 2 + 20, 140),
+             1: (WIN_WIDTH / 2 + 20, 160),
+             2: (WIN_WIDTH / 2 + 20, 180),
+             3: (WIN_WIDTH / 2 + 20, 200),
+             4: (WIN_WIDTH / 2 + 20, 220),
+             5: (WIN_WIDTH / 2 + 20, 240),
+             6: (WIN_WIDTH / 2 + 20, 260),
+             7: (WIN_WIDTH / 2 + 20, 280),
+             8: (WIN_WIDTH / 2 + 20, 300),
+             9: (WIN_WIDTH / 2 + 20, 320),
+             }
